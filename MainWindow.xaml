@@ -30,13 +30,14 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <Canvas x:Name="Table2" Margin="776,10,269.768,516">
+        <Canvas x:Name="TableGroup" Margin="776,10,269.768,516">
             <Ellipse x:Name="Table" Fill="Red" Height="371.847" Stroke="Black" Width="371.844" Canvas.Left="205.303" Canvas.Top="170.854"/>
             <Image x:Name="image" Width="198.456" Source="cutout-girl.png" Height="198.456" Canvas.Left="428.827" Canvas.Top="10"/>
             <Image x:Name="image_Copy" Width="121.162" Source="cutout-dino.png" Height="202.877" Canvas.Left="554.695" Canvas.Top="218.901"/>
             <Image x:Name="image1" Height="210.99" Source="cutout-piano.png" Canvas.Left="72.556" Canvas.Top="40.194" Width="210.989"/>
             <Image x:Name="image2" Source="cutout-ninja.png" Height="232.913" Canvas.Top="419.699" Width="177.565" Canvas.Left="75.786"/>
             <Image x:Name="image_Copy1" Width="150.409" Source="cutout-girl.png" Height="150.409" Canvas.Left="426.738" Canvas.Top="502.203"/>
+            <Image x:Name="BaseTable" Height="393.844" Width="417.844" Source="cutout-table.png" Canvas.Left="183.303" Canvas.Top="170.854"/>
             <Canvas x:Name="spingroup" Height="275.753" Canvas.Left="253.351" Canvas.Top="218.901" Width="275.752" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
                     <TransformGroup>
@@ -46,7 +47,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Canvas.RenderTransform>
-                <Ellipse x:Name="table" Fill="#FFD37E19" Height="275.753" Stroke="Black" Width="275.752"/>
+                <Image x:Name="spintable" Height="332" Width="442" Source="cutout-spin.png" Canvas.Left="-88" Canvas.Top="-28"/>
                 <Image x:Name="food" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="50.194" Canvas.Top="22.283" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
