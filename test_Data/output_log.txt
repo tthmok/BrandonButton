@@ -25,7 +25,7 @@ Loading C:\Users\tthmok\Documents\UnityProjects\BrandonButton\test_Data\Managed\
 Platform assembly: C:\Users\tthmok\Documents\UnityProjects\BrandonButton\test_Data\Managed\DOTween46.dll (this message is harmless)
 Loading C:\Users\tthmok\Documents\UnityProjects\BrandonButton\test_Data\Managed\DOTween46.dll into Unity Child Domain
 Platform assembly: C:\Users\tthmok\Documents\UnityProjects\BrandonButton\test_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.124 seconds
+- Completed reload, in  0.128 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
@@ -33,5 +33,5 @@ XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Initialized touch support.
 Platform assembly: C:\Users\tthmok\Documents\UnityProjects\BrandonButton\test_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2a2c -> priority: 1 
-  Thread -> id: 1128 -> priority: 1 
+  Thread -> id: 13dc -> priority: 1 
+  Thread -> id: 2f30 -> priority: 1 
