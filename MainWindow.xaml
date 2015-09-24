@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrandonButton"
         mc:Ignorable="d"
-        Title="BrandonButton" Height="357" Width="525" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize">
+        Title="BrandonButton" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize" d:DesignWidth="1052" Width="1912" Height="1200">
+    <Window.Resources>
+        <Storyboard x:Key="SpinTable2" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="spingroup">
+                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="180">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="1"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:11" Value="334.327672874611"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:13" Value="334.32767287461127"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="360">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <ElasticEase EasingMode="EaseOut" Springiness="1" Oscillations="1"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource SpinTable2}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
-        
+        <Canvas x:Name="Table2" Margin="776,10,269.768,516">
+            <Ellipse x:Name="Table" Fill="Red" Height="371.847" Stroke="Black" Width="371.844" Canvas.Left="205.303" Canvas.Top="170.854"/>
+            <Image x:Name="image" Width="198.456" Source="cutout-girl.png" Height="198.456" Canvas.Left="428.827" Canvas.Top="10"/>
+            <Image x:Name="image_Copy" Width="121.162" Source="cutout-dino.png" Height="202.877" Canvas.Left="554.695" Canvas.Top="218.901"/>
+            <Image x:Name="image1" Height="210.99" Source="cutout-piano.png" Canvas.Left="72.556" Canvas.Top="40.194" Width="210.989"/>
+            <Image x:Name="image2" Source="cutout-ninja.png" Height="232.913" Canvas.Top="419.699" Width="177.565" Canvas.Left="75.786"/>
+            <Image x:Name="image_Copy1" Width="150.409" Source="cutout-girl.png" Height="150.409" Canvas.Left="426.738" Canvas.Top="502.203"/>
+            <Canvas x:Name="spingroup" Height="275.753" Canvas.Left="253.351" Canvas.Top="218.901" Width="275.752" RenderTransformOrigin="0.5,0.5">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Ellipse x:Name="table" Fill="#FFD37E19" Height="275.753" Stroke="Black" Width="275.752"/>
+                <Image x:Name="food" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="50.194" Canvas.Top="22.283" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-8.697"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+                <Image x:Name="food_Copy" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="62.194" Canvas.Top="165.283" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-177.966"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+        </Canvas>
     </Grid>
 </Window>
