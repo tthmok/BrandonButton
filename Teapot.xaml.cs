@@ -13,30 +13,29 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace BrandonButton
 {
     /// <summary>
-    /// Interaction logic for TeaCup.xaml
+    /// Interaction logic for Teapot.xaml
     /// </summary>
-    public partial class TeaCup : UserControl
+    public partial class Teapot : UserControl
     {
         private int teaLevel;
         private List<Image> teaImages = new List<Image>();
-
-        private DispatcherTimer _timer = new DispatcherTimer();
-        private Random rand = new Random();
-
         private const int maxTeaLevel = 3;
+
+        public List<TeaCup> emptyCups = new List<TeaCup>();
+
         public int TeaLevel
         {
             get { return this.teaLevel; }
-            set {
+            set
+            {
                 if (value < maxTeaLevel + 1)
                 {
                     this.teaLevel = value;
-                    Debug.Write("New tea: " + this.teaLevel);
+                    Debug.Write("New teapot level: " + this.teaLevel);
 
                     for (int i = 0; i < teaImages.Count; i++)
                     {
@@ -53,23 +52,23 @@ namespace BrandonButton
                 }
             }
         }
-
-        public TeaCup()
+        public Teapot()
         {
             InitializeComponent();
 
             setupTea();
-            InitAndStartTimer();
 
             Messenger.AddListener("BrandonButton_Clicked", OnBrandonButtonClicked);
+
+            Messenger.AddListener<TeaCup>("TeaCupEmpty", OnTeaCupEmpty);
         }
 
         private void setupTea()
         {
-            teaImages.Add(this.Tea0);
-            teaImages.Add(this.Tea1);
-            teaImages.Add(this.Tea2);
-            teaImages.Add(this.Tea3);
+            teaImages.Add(this.Teapot0);
+            teaImages.Add(this.Teapot1);
+            teaImages.Add(this.Teapot2);
+            teaImages.Add(this.Teapot3);
             this.TeaLevel = 3;
         }
 
@@ -78,33 +77,24 @@ namespace BrandonButton
             TeaLevel = maxTeaLevel;
         }
 
+        private void OnTeaCupEmpty(TeaCup teacup)
+        {
+            if (!emptyCups.Contains(teacup))
+            {
+                emptyCups.Add(teacup);
+            }
+        }
+
         private void OnBrandonButtonClicked()
         {
-            Debug.Write("Tea heard brandon was clicked");
-        }
-
-        public void InitAndStartTimer()
-        {
-            _timer.Tick += dispatcherTimer_Tick;
-            _timer.Interval = TimeSpan.FromSeconds(rand.Next(3, 9)); // From 1 s to 10 s
-            Debug.Write("interval: " + _timer.Interval);
-            _timer.Start();
-        }
-
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
-        {
-            _timer.Interval = TimeSpan.FromSeconds(rand.Next(3, 9)); // From 1 s to 10 s
-            Debug.Write("new interval: " + _timer.Interval);
-
-            if (this.TeaLevel > 0)
+            Debug.Write("Teapot heard brandon was clicked");
+            if (TeaLevel > 0 && emptyCups.Count > 0)
             {
-                this.TeaLevel = this.TeaLevel - 1;
-
-                if (this.teaLevel == 0)
-                {
-                    Debug.Write("Tea Empty");
-                    Messenger.Broadcast<TeaCup>("TeaCupEmpty", this);
-                }
+                TeaLevel--;
+                emptyCups[0].Fill();
+                emptyCups.RemoveAt(0);
+            } else if (TeaLevel == 0) {
+                Fill();
             }
         }
     }

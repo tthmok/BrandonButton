@@ -71,7 +71,8 @@
         </Canvas>
         <local:TeaCup HorizontalAlignment="Left" Margin="190,199,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BrandonButton" HorizontalAlignment="Left" Margin="211,530,0,0" VerticalAlignment="Top" Width="232" Height="233.96" Background="#FFFFEF89" FontSize="48">
-        	<Image x:Name="Face" Height="216" Width="216" Source="cutout-face1.png" OpacityMask="Black"/>
+            <Image x:Name="Face" Height="216" Width="216" Source="cutout-face1.png" OpacityMask="Black"/>
         </Button>
+        <local:Teapot x:Name="Teapot" HorizontalAlignment="Left" Height="227" Margin="505,226,0,0" VerticalAlignment="Top" Width="313"/>
     </Grid>
 </Window>
