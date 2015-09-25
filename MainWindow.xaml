@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BrandonButton"
         mc:Ignorable="d"
-        Title="BrandonButton" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize" d:DesignWidth="1052" Width="1912" Height="1200">
+        Title="BrandonButton" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize" d:DesignWidth="1052" Width="1920" Height="1107" Background="#FFF9DABB">
     <Window.Resources>
         <Storyboard x:Key="SpinTable2" RepeatBehavior="Forever">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="spingroup">
@@ -22,6 +22,23 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
             </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="spingroup1">
+            	<EasingDoubleKeyFrame KeyTime="0:0:6" Value="-46">
+            		<EasingDoubleKeyFrame.EasingFunction>
+            			<SineEase EasingMode="EaseInOut"/>
+            		</EasingDoubleKeyFrame.EasingFunction>
+            	</EasingDoubleKeyFrame>
+            	<EasingDoubleKeyFrame KeyTime="0:0:10.8" Value="128">
+            		<EasingDoubleKeyFrame.EasingFunction>
+            			<PowerEase EasingMode="EaseInOut"/>
+            		</EasingDoubleKeyFrame.EasingFunction>
+            	</EasingDoubleKeyFrame>
+            	<EasingDoubleKeyFrame KeyTime="0:0:15" Value="0">
+            		<EasingDoubleKeyFrame.EasingFunction>
+            			<CubicEase EasingMode="EaseInOut"/>
+            		</EasingDoubleKeyFrame.EasingFunction>
+            	</EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -30,49 +47,179 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <Canvas x:Name="TableGroup" Margin="776,10,269.768,516">
-            <Image x:Name="BaseTable" Height="393.844" Width="417.844" Source="cutout-table.png" Canvas.Left="183.303" Canvas.Top="170.854"/>
-            <Image x:Name="girl" Width="198.456" Source="cutout-girl.png" Height="198.456" Canvas.Left="428.827" Canvas.Top="10"/>
-            <Image x:Name="dino" Width="121.162" Source="cutout-dino.png" Height="202.877" Canvas.Left="566.695" Canvas.Top="218.901"/>
-            <Image x:Name="piano" Height="210.99" Source="cutout-piano.png" Canvas.Left="72.556" Canvas.Top="40.194" Width="210.989"/>
-            <Image x:Name="ninja" Source="cutout-ninja.png" Height="232.913" Canvas.Top="419.699" Width="177.565" Canvas.Left="75.786"/>
-            <Image x:Name="girl2" Width="150.409" Source="cutout-girl.png" Height="150.409" Canvas.Left="428.827" Canvas.Top="513.591"/>
-            <Canvas x:Name="spingroup" Height="275.753" Canvas.Left="253.351" Canvas.Top="218.901" Width="275.752" RenderTransformOrigin="0.5,0.5">
+        <local:Teapot x:Name="Teapot" HorizontalAlignment="Left" Height="255.981" VerticalAlignment="Top" Width="352.96" Margin="945,873.04,0,-22.021"/>
+        <Image HorizontalAlignment="Left" Height="248" Margin="1194.587,552.04,0,0" VerticalAlignment="Top" Width="248" Source="cutout-face1.png">
+        	<Image.Effect>
+        		<DropShadowEffect BlurRadius="4"/>
+        	</Image.Effect>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="248" Margin="914.379,43,0,0" VerticalAlignment="Top" Width="248" Source="cutout-face2.png">
+        	<Image.Effect>
+        		<DropShadowEffect BlurRadius="4"/>
+        	</Image.Effect>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="248" Margin="141,494,0,0" VerticalAlignment="Top" Width="248" Source="cutout-face2.png">
+        	<Image.Effect>
+        		<DropShadowEffect BlurRadius="4"/>
+        	</Image.Effect>
+        </Image>
+        <Image HorizontalAlignment="Left" Height="248" Margin="344.379,43,0,0" VerticalAlignment="Top" Width="248" Source="cutout-face2.png">
+        	<Image.Effect>
+        		<DropShadowEffect BlurRadius="4"/>
+        	</Image.Effect>
+        </Image>
+        <Canvas x:Name="BrandonTable" Margin="446,148,722.413,238.96">
+        	<Canvas.Effect>
+        		<DropShadowEffect/>
+        	</Canvas.Effect>
+        	<Image x:Name="BaseTable1" Height="681.639" Width="723.178" Source="cutout-table.png" Canvas.Left="6.311" Canvas.Top="61.205" RenderTransformOrigin="0.5,0.5">
+        		<Image.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform Angle="-38.097"/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Image.RenderTransform>
+        	</Image>
+        	<Canvas x:Name="spingroup1" Height="457.753" Canvas.Left="100" Canvas.Top="162" Width="487.752" RenderTransformOrigin="0.5,0.5">
+        		<Canvas.RenderTransform>
+        			<TransformGroup>
+        				<ScaleTransform/>
+        				<SkewTransform/>
+        				<RotateTransform/>
+        				<TranslateTransform/>
+        			</TransformGroup>
+        		</Canvas.RenderTransform>
+        		<Image x:Name="spintable1" Height="604.38" Width="804.625" Source="cutout-spin.png" Canvas.Left="-137.344" Canvas.Top="-82.711" RenderTransformOrigin="0.5,0.5">
+        			<Image.Effect>
+        				<DropShadowEffect/>
+        			</Image.Effect>
+        			<Image.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform Angle="48.621"/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Image.RenderTransform>
+        		</Image>
+        		<Image x:Name="food1" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="142.194" Canvas.Top="-11.717" RenderTransformOrigin="0.5,0.5">
+        			<Image.Effect>
+        				<DropShadowEffect/>
+        			</Image.Effect>
+        			<Image.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform Angle="14.528"/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Image.RenderTransform>
+        		</Image>
+        		<Image x:Name="food1_Copy" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="78.194" Canvas.Top="146.283" RenderTransformOrigin="0.5,0.5">
+        			<Image.Effect>
+        				<DropShadowEffect/>
+        			</Image.Effect>
+        			<Image.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform Angle="-32.494"/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Image.RenderTransform>
+        		</Image>
+        		<Image x:Name="food1_Copy1" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="300.194" Canvas.Top="234.283" RenderTransformOrigin="0.5,0.5">
+        			<Image.Effect>
+        				<DropShadowEffect/>
+        			</Image.Effect>
+        			<Image.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform Angle="7.731"/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</Image.RenderTransform>
+        		</Image>
+        	</Canvas>
+        </Canvas>
+        <Canvas x:Name="TableGroup" Margin="1470,-188,-158,714">
+            <Image x:Name="BaseTable" Height="314.129" Width="333.272" Source="cutout-table.png" Canvas.Left="175.817" Canvas.Top="139.338">
+            	<Image.Effect>
+            		<DropShadowEffect/>
+            	</Image.Effect>
+            </Image>
+            <Canvas x:Name="spingroup" Height="219.94" Canvas.Left="231.687" Canvas.Top="177.66" Width="219.939" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
+                    	<ScaleTransform/>
+                    	<SkewTransform/>
+                    	<RotateTransform/>
+                    	<TranslateTransform/>
                     </TransformGroup>
                 </Canvas.RenderTransform>
-                <Image x:Name="spintable" Height="332" Width="442" Source="cutout-spin.png" Canvas.Left="-88" Canvas.Top="-28"/>
-                <Image x:Name="food" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="50.194" Canvas.Top="22.283" RenderTransformOrigin="0.5,0.5">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-8.697"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
-                <Image x:Name="food_Copy" Height="100" Width="167.647" Source="cutout-food.png" Canvas.Left="62.194" Canvas.Top="165.283" RenderTransformOrigin="0.5,0.5">
-                    <Image.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-177.966"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Image.RenderTransform>
-                </Image>
+            	<Image x:Name="spintable" Height="264" Width="351.47" Source="cutout-spin.png" Canvas.Left="-76" Canvas.Top="-22">
+            		<Image.Effect>
+            			<DropShadowEffect/>
+            		</Image.Effect>
+            	</Image>
+            	<Image x:Name="food" Height="79.518" Width="133.31" Source="cutout-food.png" Canvas.Left="33.889" Canvas.Top="17.984" RenderTransformOrigin="0.5,0.5">
+            		<Image.Effect>
+            			<DropShadowEffect/>
+            		</Image.Effect>
+            		<Image.RenderTransform>
+            			<TransformGroup>
+            				<ScaleTransform/>
+            				<SkewTransform/>
+            				<RotateTransform Angle="-8.697"/>
+            				<TranslateTransform/>
+            			</TransformGroup>
+            		</Image.RenderTransform>
+            	</Image>
+            	<Image x:Name="food_Copy" Height="79.518" Width="133.31" Source="cutout-food.png" Canvas.Left="43.431" Canvas.Top="131.695" RenderTransformOrigin="0.5,0.5">
+            		<Image.Effect>
+            			<DropShadowEffect/>
+            		</Image.Effect>
+            		<Image.RenderTransform>
+            			<TransformGroup>
+            				<ScaleTransform/>
+            				<SkewTransform/>
+            				<RotateTransform Angle="-177.966"/>
+            				<TranslateTransform/>
+            			</TransformGroup>
+            		</Image.RenderTransform>
+            	</Image>
             </Canvas>
+            <Image x:Name="dino" Width="96.639" Source="cutout-dino.png" Height="161.814" Canvas.Left="350.901" Canvas.Top="397.6">
+            	<Image.Effect>
+            		<DropShadowEffect/>
+            	</Image.Effect>
+            </Image>
+            <Image x:Name="girl" Width="127.979" Source="cutout-girl.png" Height="127.979" Canvas.Left="75.791" Canvas.Top="190.833">
+            	<Image.Effect>
+            		<DropShadowEffect/>
+            	</Image.Effect>
+            </Image>
+            <Image x:Name="piano" Height="125.215" Source="cutout-piano.png" Canvas.Left="218.687" Canvas.Top="394.6" Width="125.214">
+            	<Image.Effect>
+            		<DropShadowEffect/>
+            	</Image.Effect>
+            </Image>
+            <Image x:Name="ninja" Source="cutout-ninja.png" Height="132.655" Canvas.Top="308.812" Width="101.131" Canvas.Left="115.556">
+            	<Image.Effect>
+            		<DropShadowEffect/>
+            	</Image.Effect>
+            </Image>
         </Canvas>
-        <local:TeaCup HorizontalAlignment="Left" Margin="190,199,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="BrandonButton" HorizontalAlignment="Left" Margin="211,530,0,0" VerticalAlignment="Top" Width="232" Height="233.96" Background="#FFFFEF89" FontSize="48">
+        <Button x:Name="BrandonButton" HorizontalAlignment="Left" Margin="713,873.04,0,0" VerticalAlignment="Top" Width="232" Height="233.96" Background="#FFFFEF89" FontSize="48" BorderThickness="5">
             <Image x:Name="Face" Height="216" Width="216" Source="cutout-face1.png" OpacityMask="Black"/>
         </Button>
-        <local:Teapot x:Name="Teapot" HorizontalAlignment="Left" Height="227" Margin="505,226,0,0" VerticalAlignment="Top" Width="313"/>
+        <local:TeaCup HorizontalAlignment="Left" Margin="559.661,815,0,0" VerticalAlignment="Top" Height="152" Width="176.977" />
+        <local:TeaCup HorizontalAlignment="Left" Margin="592.379,148,0,0" VerticalAlignment="Top" Height="143" Width="172.259"/>
+        <local:TeaCup HorizontalAlignment="Left" Margin="344.379,616.04,0,0" VerticalAlignment="Top" Height="144.367" Width="185.638"/>
+        <local:TeaCup HorizontalAlignment="Left" Margin="1005,241.745,0,0" VerticalAlignment="Top" Height="151.255" Width="184.587"/>
+        <local:TeaCup HorizontalAlignment="Left" Margin="1073,679,0,0" VerticalAlignment="Top" Height="144" Width="173.268"/>
     </Grid>
 </Window>

@@ -26,9 +26,10 @@ namespace BrandonButton
         private List<Image> teaImages = new List<Image>();
 
         private DispatcherTimer _timer = new DispatcherTimer();
-        private Random rand = new Random();
+        private Random rand = new Random(DateTime.Now.Millisecond);
 
         private const int maxTeaLevel = 3;
+
         public int TeaLevel
         {
             get { return this.teaLevel; }
@@ -38,12 +39,16 @@ namespace BrandonButton
                     this.teaLevel = value;
                     Debug.Write("New tea: " + this.teaLevel);
 
+                    if (this.TeaLevel > 0)
+                    {
+                        this.Speech.Visibility = Visibility.Hidden;
+                    }
+
                     for (int i = 0; i < teaImages.Count; i++)
                     {
                         if (this.teaLevel == i)
                         {
                             teaImages[i].Visibility = Visibility.Visible;
-
                         }
                         else
                         {
@@ -86,14 +91,14 @@ namespace BrandonButton
         public void InitAndStartTimer()
         {
             _timer.Tick += dispatcherTimer_Tick;
-            _timer.Interval = TimeSpan.FromSeconds(rand.Next(3, 9)); // From 1 s to 10 s
+            _timer.Interval = TimeSpan.FromSeconds(rand.Next(1, 7)); // From 1 s to 7 s
             Debug.Write("interval: " + _timer.Interval);
             _timer.Start();
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            _timer.Interval = TimeSpan.FromSeconds(rand.Next(3, 9)); // From 1 s to 10 s
+            _timer.Interval = TimeSpan.FromSeconds(rand.Next(1, 7)); // From 1 s to 7 s
             Debug.Write("new interval: " + _timer.Interval);
 
             if (this.TeaLevel > 0)
@@ -104,6 +109,7 @@ namespace BrandonButton
                 {
                     Debug.Write("Tea Empty");
                     Messenger.Broadcast<TeaCup>("TeaCupEmpty", this);
+                    this.Speech.Visibility = Visibility.Visible;
                 }
             }
         }

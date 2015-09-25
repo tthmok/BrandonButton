@@ -149,6 +149,9 @@
     <Resource Include="cutout-teapot2.png" />
     <Resource Include="cutout-teapot3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Final_Fantasy_7_Philharmonic_Suite_Part_I_OC_ReMix.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

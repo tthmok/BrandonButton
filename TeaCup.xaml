@@ -4,11 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="159" d:DesignWidth="159">
     <Grid>
-        <Image x:Name="Tea0" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Source="cutout-tea0.png"/>
-        <Image x:Name="Tea1" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Source="cutout-tea1.png"/>
-        <Image x:Name="Tea2" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Source="cutout-tea2.png"/>
-        <Image x:Name="Tea3" HorizontalAlignment="Left" Height="280" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" Source="cutout-tea3.png"/>
+        <Image x:Name="Tea0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Source="cutout-tea0.png">
+        	<Image.Effect>
+        		<DropShadowEffect/>
+        	</Image.Effect>
+        </Image>
+        <Image x:Name="Tea1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Source="cutout-tea1.png">
+        	<Image.Effect>
+        		<DropShadowEffect/>
+        	</Image.Effect>
+        </Image>
+        <Image x:Name="Tea2" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Source="cutout-tea2.png">
+        	<Image.Effect>
+        		<DropShadowEffect/>
+        	</Image.Effect>
+        </Image>
+        <Image x:Name="Tea3" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Source="cutout-tea3.png">
+        	<Image.Effect>
+        		<DropShadowEffect/>
+        	</Image.Effect>
+        </Image>
+        <Image x:Name="Speech" HorizontalAlignment="Left" Height="170" Margin="0,-146,0,0" VerticalAlignment="Top" Width="159" Source="cutout-daibi.png" Visibility="Hidden">
+        	<Image.Effect>
+        		<DropShadowEffect BlurRadius="8"/>
+        	</Image.Effect>
+        </Image>
     </Grid>
 </UserControl>
