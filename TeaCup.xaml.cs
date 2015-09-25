@@ -26,7 +26,7 @@ namespace BrandonButton
         private List<Image> teaImages = new List<Image>();
 
         private DispatcherTimer _timer = new DispatcherTimer();
-        private Random rand = new Random(DateTime.Now.Millisecond);
+        private Random rand;
 
         private const int maxTeaLevel = 3;
 
@@ -62,6 +62,8 @@ namespace BrandonButton
         public TeaCup()
         {
             InitializeComponent();
+
+            rand = new Random(DateTime.Now.Millisecond);
 
             setupTea();
             InitAndStartTimer();
