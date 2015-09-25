@@ -133,17 +133,13 @@
     <Resource Include="cutout-spin.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="cutout-bloop.png" />
     <Resource Include="cutout-daibi.png" />
     <Resource Include="cutout-face1.png" />
     <Resource Include="cutout-face2.png" />
-    <Resource Include="cutout-hai.png" />
-    <Resource Include="cutout-itgma.png" />
     <Resource Include="cutout-tea0.png" />
     <Resource Include="cutout-tea1.png" />
     <Resource Include="cutout-tea2.png" />
     <Resource Include="cutout-tea3.png" />
-    <Resource Include="cutout-teapot-top.png" />
     <Resource Include="cutout-teapot0.png" />
     <Resource Include="cutout-teapot1.png" />
     <Resource Include="cutout-teapot2.png" />
