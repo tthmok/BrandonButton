@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,8 @@ namespace BrandonButton
             InitializeComponent();
 
             this.KeyUp += OnKeyUp;
+
+            this.BrandonButton.Click += BrandonButton_Click;
         }
 
         private void OnKeyUp(object sender, KeyEventArgs e)
@@ -33,6 +36,12 @@ namespace BrandonButton
             {
                 Application.Current.Shutdown();
             }
+        }
+
+        private void BrandonButton_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.Write("BrandonButton Click");
+            Messenger.Broadcast("BrandonButton_Clicked");
         }
     }
 }
