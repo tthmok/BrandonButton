@@ -26,9 +26,11 @@ namespace BrandonButton
         {
             InitializeComponent();
 
-            Storyboard audioResourceWav;
-            audioResourceWav = (Storyboard)this.Resources["Final_Fantasy_7_Philharmonic_Suite_Part_I_OC_ReMix.mp3"];
-            audioResourceWav.Begin(this);
+            var mp3Filename = "Final_Fantasy_7_Philharmonic_Suite_Part_I_OC_ReMix.mp3";
+            var player = new MediaPlayer();
+            var uri = new Uri(mp3Filename, UriKind.Relative);
+            player.Open(uri);
+            player.Play();
 
             this.KeyUp += OnKeyUp;
 

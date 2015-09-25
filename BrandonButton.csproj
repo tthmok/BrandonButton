@@ -150,7 +150,9 @@
     <Resource Include="cutout-teapot3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Final_Fantasy_7_Philharmonic_Suite_Part_I_OC_ReMix.mp3" />
+    <Content Include="Final_Fantasy_7_Philharmonic_Suite_Part_I_OC_ReMix.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
